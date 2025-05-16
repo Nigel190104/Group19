@@ -1,0 +1,56 @@
+.journal-sort-dropdown .dropdown-toggle {
+  background-color: #f3ece1;
+  color: #7a4a2b;
+  border: 1px solid #e1d5c4;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(122, 74, 43, 0.1);
+  transition: all 0.15s ease;
+  display: flex;
+  align-items: center;
+}
+
+.journal-sort-dropdown .dropdown-toggle:hover,
+.journal-sort-dropdown .dropdown-toggle:focus {
+  background-color: #f0e4d8;
+  box-shadow: 0 3px 6px rgba(122, 74, 43, 0.15);
+}
+
+.journal-sort-dropdown .dropdown-toggle::after {
+  margin-left: 0.5rem;
+  vertical-align: middle;
+  color: #7a4a2b;
+}
+
+.journal-sort-dropdown .dropdown-menu {
+  background-color: #f8f5f0;
+  border: 1px solid #e1d5c4;
+  border-radius: 6px;
+  box-shadow: 0 3px 8px rgba(122, 74, 43, 0.15);
+  padding: 0.25rem;
+  min-width: 180px;
+}
+
+.journal-sort-dropdown .dropdown-item {
+  color: #7a4a2b;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.1s ease;
+}
+
+.journal-sort-dropdown .dropdown-item:hover {
+  background-color: #f0e4d8;
+}
+
+.journal-sort-dropdown .dropdown-item.active,
+.journal-sort-dropdown .dropdown-item:active {
+  background-color: #a6754a;
+  color: white;
+}
+
+.sort-icon {
+  margin-right: 0.5rem;
+  opacity: 0.7;
+}

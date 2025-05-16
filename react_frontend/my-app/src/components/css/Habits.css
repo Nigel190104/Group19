@@ -1,0 +1,492 @@
+.habit-tracker {
+  border-radius: 16px;
+  position: relative;
+}
+
+.month-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.nav-arrow {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+.month-title {
+  margin: 0 20px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.habit-grid {
+  display: grid;
+  grid-template-columns: var(
+    --grid-template-columns,
+    minmax(120px, auto) repeat(7, 1fr) auto
+  );
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  margin: 0 auto;
+  overflow-x: auto;
+}
+
+.grid-cell {
+  padding: 12px;
+  text-align: center;
+  background-color: white;
+  border: 1px solid #e6e6e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-cell {
+  font-weight: 500;
+  background-color: white;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.date-cell {
+  color: #666;
+  font-weight: 400;
+  border-bottom: 2px solid #e6e6e6;
+}
+
+.habit-name {
+  text-align: left;
+  justify-content: flex-start;
+  padding-left: 20px;
+  border-right: 1px solid #e6e6e6;
+  font-weight: 400;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: var(--habit-name-width);
+  min-height: 80px;
+  padding: 0 10px;
+}
+
+.habit-cell {
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  padding: 0;
+}
+
+.non-interactive {
+  background-color: #ffffff81;
+  color: #333;
+}
+
+.current-day {
+  background-color: #d1d1d170;
+}
+
+.check-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+}
+
+.streak-cell {
+  /* background-color: white; */
+  justify-content: center;
+  padding: 12px;
+}
+
+.streak-counter {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: center;
+}
+
+.no-streak {
+  width: 20px;
+  height: 20px;
+  background-color: #e6e6e6;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+.add-habit-btn {
+  background-color: var(--primary-color);
+  color: #333;
+  border: none;
+  border-radius: 25px;
+  padding: 8px 20px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+.add-habit-btn:hover {
+  background-color: var(--tab-active-bg);
+}
+
+.view-toggle {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  background-color: var(--tab-active-bg);
+  border-radius: 25px;
+  padding: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Add transition for smooth background color changes */
+  transition: background-color 0.3s ease;
+  z-index: 3;
+  gap: 5px;
+}
+
+.toggle-btn {
+  border: none;
+  background: none;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  /* Enhanced transition for multiple properties */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #333;
+  position: relative;
+  z-index: 1;
+}
+
+/* Hover effect for inactive buttons */
+.toggle-btn:not(.active):hover {
+  background-color: rgba(255, 124, 124, 0.2);
+  /* color: #ff7c7c; */
+  transform: translateY(-1px);
+}
+
+/* Active state with transition */
+.toggle-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+  /* Adding subtle scale effect on active */
+  transform: scale(1.03);
+  box-shadow: 0 2px 8px rgba(255, 124, 124, 0.3);
+}
+
+/* Optional: Add a subtle pulse animation when switching views */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.toggle-btn.active:active {
+  animation: pulse 0.3s ease;
+}
+
+/* Optional: Container hover effect */
+.view-toggle:hover {
+  background-color: var(--tab-active-bg);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.month-abbrev {
+  font-size: 0.7em;
+  color: #999;
+  margin-right: 4px;
+}
+
+/* Habit colors and filled cells */
+.completed {
+  background-color: var(--habit-color, #ffd1ba);
+  border-radius: 10px;
+}
+
+/* Make sure all grid cells have content */
+.grid-cell:empty {
+  content: " ";
+  display: block;
+}
+
+.not-completed {
+  /* display: flex;
+  position: relative; */
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.not-completed::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(0deg, transparent, transparent 30%, #e6e6e6);
+  transform: rotate(-45deg);
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+.not-completed:hover {
+  box-shadow: 0 0 20px #e3e3e3;
+}
+
+.not-completed:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+.month-cell.not-completed::before {
+  top: -100px;
+  left: -150%;
+  height: 400%;
+  width: 400%;
+  transition: all 1.5s ease;
+}
+
+.month-cell.not-completed:hover::before {
+  transform: rotate(-25deg) translateY(100%);
+}
+
+#month-button-wrapper {
+  display: flex;
+  width: 223px;
+  justify-content: center;
+  align-items: center;
+}
+
+.bubbly-button {
+  position: relative;
+  background-color: #eae1d1;
+  color: #454545;
+  border-radius: 10px;
+  font-weight: 600;
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  overflow: visible;
+}
+
+#habit-name-button {
+  background-color: #ffffff81;
+  /* padding: 0; */
+  border-radius: 0px;
+}
+
+.bubbly-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  background-color: rgba(151, 145, 136, 0.26);
+  border-radius: 8px; /* Adjust radius as needed */
+  transition: width 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    height 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: -1; /* Place behind button content */
+}
+
+.bubbly-button:hover::before {
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+}
+
+.habit-cell.future-date {
+  pointer-events: none;
+}
+
+.habit-cell.future-date.completed {
+  background-color: #f0f0f0 !important;
+}
+
+/* Month view specific styles */
+.month-view-container {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  /* background-color: white; */
+}
+
+.month-grid-horizontal {
+  display: table;
+  border-collapse: collapse;
+  width: max-content;
+  min-width: 100%;
+  /* background-color: white; */
+}
+
+.month-header-row {
+  display: table-row;
+}
+
+.month-habit-row {
+  display: table-row;
+}
+
+.month-cell {
+  display: table-cell;
+  border: 1px solid #e6e6e6;
+  text-align: center;
+  align-items: center;
+  vertical-align: middle;
+  /* Toggle this for a wider, scrollable month view */
+  /* min-width: 50px; */
+  position: relative;
+  min-width: 25px;
+}
+
+.day-header {
+  padding: 5px 0;
+  border-bottom: 2px solid #e6e6e6;
+  font-weight: 500;
+  height: 90px;
+}
+
+.day-of-week {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 2px;
+}
+
+.day-number {
+  font-size: 15px;
+  font-weight: 400;
+  color: #666;
+}
+
+.day-number.today {
+  font-weight: 700;
+}
+
+.month-cell.habit-name {
+  text-align: left;
+  background-color: #ffffff81;
+  /* position: sticky; */
+  left: 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+  width: var(--habit-name-width);
+  height: 80px;
+  font-weight: 400;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-right: 1px solid #e6e6e6;
+}
+
+.month-cell.streak-header,
+.month-cell.streak-cell {
+  width: 60px;
+  /* background-color: white; */
+  /* position: sticky; */
+  right: 0;
+  z-index: 1;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.05);
+  border-left: 1px solid #e6e6e6;
+}
+
+.month-cell.habit-cell {
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  padding: 0;
+}
+
+.month-cell.habit-cell.not-completed {
+  display: table-cell;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  background-color: white;
+}
+
+.month-cell.habit-cell.future-date {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.month-cell.habit-cell.future-date.completed {
+  background-color: #f0f0f0 !important;
+}
+
+.month-cell.current-day {
+  background-color: #d1d1d170;
+}
+
+/* Month day number */
+.month-day-number {
+  position: absolute;
+  top: 2px;
+  left: 4px;
+  font-size: 0.7rem;
+  color: #777;
+}
+
+/* Make sure all grid cells have content */
+.month-cell:empty {
+  content: " ";
+  display: block;
+}
+
+.month-icon {
+  margin: auto;
+}
+
+.month-cell.current-day.not-completed {
+  background-color: #d1d1d170;
+}
+
+.habit-cell-wrapper{
+  display:inline-flex;
+}
+
+.day-header-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+List View Styles
+.habit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+#habit-name-button { 
+  position: relative;
+  padding-right: 20px; 
+}
+
+.bi-three-dots {
+  position: absolute;
+  top: 10px; 
+  right: 15px; 
+}

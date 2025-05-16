@@ -1,0 +1,401 @@
+/* Main card styles */
+.journal-card {
+  border-radius: 12px;
+  border: none;
+  background-color: var(--card-bg-color);
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23e8e2d3' fill-opacity='0.3' fill-rule='evenodd'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/svg%3E");
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 15px var(--shadow-color);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Journal title styles */
+.journal-title {
+  font-size: 2.5rem;
+  color: var(--text-color);
+}
+
+.card-subtitle {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+/* Utility container for month selector and dropdown */
+.utility {
+  margin-bottom: 24px;
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+/* Work note card styling */
+/* .note-card {
+  background-color: #f8f5f2;
+  border-radius: 8px;
+  padding: 1.25rem;
+  border-left: 4px solid #7a4a2b;
+  transition: all 0.15s ease;
+  box-shadow: 0 1px 3px rgba(122, 74, 43, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.note-card:hover {
+  box-shadow: 0 4px 8px rgba(122, 74, 43, 0.15);
+  transform: translateY(-3px);
+} */
+
+.note-header h3 {
+  font-size: 1.25rem;
+  color: var(--text-color);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.note-date {
+  font-size: 0.85rem;
+  color: var(--text-color);
+  opacity: 0.7;
+}
+
+.note-content {
+  color: var(--text-color);
+  white-space: pre-line;
+  margin-bottom: 1rem;
+}
+
+/* Task styling */
+.tasks-header {
+  font-size: 1rem;
+  color: var(--text-color);
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.task-list {
+  margin-top: 12px;
+}
+
+.task-item {
+  padding: 10px 12px;
+  background-color: var(--card-bg-color);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 8px;
+  transition: all 0.15s ease;
+}
+
+.task-item:hover {
+  background-color: var(--background-color);
+  box-shadow: 0 2px 6px var(--shadow-color);
+}
+
+.task-details {
+  flex: 1;
+}
+
+.task-details .form-check-label {
+  color: var(--text-color);
+}
+
+.task-details .badge {
+  margin-left: 8px;
+  font-weight: 500;
+  padding: 0.35em 0.65em;
+}
+
+.time-spent {
+  color: var(--text-color);
+  font-size: 0.85rem;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+/* Tab styles */
+.nav-tabs {
+  margin-left: 12px;
+}
+
+.nav-tabs .nav-link {
+  color: var(--text-color);
+  font-weight: 500;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  margin-right: 0.5rem;
+  border-radius: 8px 8px 0 0;
+  transition: all 0.15s ease;
+}
+
+.nav-tabs .nav-link:hover {
+  background-color: var(--background-color);
+  border-color: transparent;
+}
+
+.nav-tabs .nav-link.active {
+  color: var(--text-color);
+  font-weight: 600;
+  background-color: var(--card-bg-color);
+  border: 1px solid var(--border-color);
+  border-bottom-color: var(--card-bg-color);
+}
+
+/* Analytics styles */
+.summary-stats .stat-item {
+  padding: 16px 0;
+  border-bottom: 1px dashed var(--border-color);
+}
+
+.summary-stats .stat-item:last-child {
+  border-bottom: none;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+  color: var(--text-color);
+  opacity: 0.7;
+}
+
+.stat-value {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+/* Timer modal styles */
+.timer-display {
+  background-color: var(--card-bg-color);
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid var(--border-color);
+  box-shadow: inset 0 1px 3px var(--shadow-color);
+}
+
+.timer-display .time {
+  font-family: monospace;
+  font-weight: 600;
+  color: var(--text-color);
+  font-size: 3rem;
+}
+
+/* Task table styles */
+.task-table-container {
+  overflow-x: auto;
+}
+
+.table {
+  color: var(--text-color);
+}
+
+.table th {
+  color: var(--text-color);
+  font-weight: 600;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.table td {
+  border-bottom: 1px solid var(--border-color);
+  vertical-align: middle;
+}
+
+.table tr:hover {
+  background-color: var(--background-color);
+}
+
+.table-light {
+  background-color: var(--card-bg-color);
+}
+
+/* Modal styles - match the journal modal styles */
+.modal-content {
+  background-color: var(--card-bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px var(--shadow-color);
+}
+
+.modal-header {
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--card-bg-color);
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  padding: 1rem 1.5rem;
+}
+
+.modal-title {
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.btn-close {
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.btn-close:hover {
+  opacity: 1;
+}
+
+/* Form controls in modals */
+.form-control,
+.form-select {
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-color);
+  background-color: var(--card-bg-color);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem var(--input-focus-color);
+}
+
+.form-check-input:checked {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.form-label {
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+/* Button styling */
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  padding: 0.5rem 1.2rem;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--toggle-active-bg);
+  border-color: var(--toggle-active-bg);
+}
+
+.btn-secondary {
+  background-color: var(--card-bg-color);
+  border-color: var(--border-color);
+  color: var(--text-color);
+  padding: 0.5rem 1.2rem;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: var(--background-color);
+  border-color: var(--border-color);
+  color: var(--text-color);
+}
+
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--tab-active-color);
+}
+
+.btn-outline-secondary {
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+.btn-outline-secondary:hover {
+  background-color: var(--card-bg-color);
+  border-color: var(--border-color);
+  color: var(--text-color);
+}
+
+.btn-outline-danger {
+  color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+/* Empty state styling */
+.empty-state-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: var(--background-color);
+}
+
+.empty-state-icon svg {
+  color: var(--text-color);
+  opacity: 0.7;
+}
+
+/* New Work Entry button */
+.btn-new-work-entry {
+  background-color: var(--card-bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.5rem 1.2rem;
+  font-weight: 500;
+  transition: all 0.15s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.btn-new-work-entry:hover {
+  background-color: var(--background-color);
+  box-shadow: 0 3px 6px var(--shadow-color);
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .journal-title {
+    font-size: 2rem;
+  }
+
+  .journal-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .journal-header > div:last-child {
+    margin-top: 1rem;
+    width: 100%;
+  }
+}
+
+.tasks-placeholder {
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.add-task-btn {
+  background-color: var(--primary-color);
+  color: var(--tab-active-color);
+  max-height: 80%;
+  padding: 5px;
+  margin-bottom: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.add-task-btn:hover {
+  background-color: var(--toggle-active-bg);
+  color: var(--tab-active-color);
+  transform: scale(1.05);
+}

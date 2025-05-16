@@ -1,0 +1,147 @@
+.create-post-modal  .modal-content {
+  background-color: #f8f5f0; /* Light beige background */
+  border: 1px solid #e1d5c4; /* Slightly darker border */
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(122, 74, 43, 0.15); /* Soft brown shadow */
+  color: #5a422f; /* Dark brown text */
+}
+
+.create-post-modal  .modal-header {
+  border-bottom: 1px solid #e1d5c4;
+  background-color: #f3ece1; /* Slightly different header background */
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  padding: 1rem 1.5rem;
+}
+
+.create-post-modal  .modal-title {
+  color: #7a4a2b; /* Main brown color for title */
+  font-weight: 600;
+}
+
+.create-post-modal  .modal-body {
+  padding: 1.5rem; /* Add padding directly to body */
+  background-color: #f8f5f0; /* Match content background */
+}
+
+.create-post-modal  .modal-footer {
+    border-top: 1px solid #e1d5c4;
+    background-color: #f3ece1; /* Match header background */
+    padding: 1rem 1.5rem;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.create-post-modal  .btn-close {
+  color: #7a4a2b;
+  opacity: 0.8;
+  filter: none; /* Override bootstrap's default filter if needed */
+}
+
+.create-post-modal  .btn-close:hover {
+  opacity: 1;
+}
+
+/* Form styling within the modal */
+.create-post-modal  .form-label {
+  color: #7a4a2b;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.create-post-modal  .form-control {
+  border: 1px solid #e1d5c4;
+  border-radius: 6px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  color: #5a422f; /* Dark brown text for inputs */
+  background-color: #fff; /* White background for inputs */
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.create-post-modal  .form-control:focus {
+  border-color: #c8a287; /* Lighter brown for focus */
+  box-shadow: 0 0 0 0.2rem rgba(122, 74, 43, 0.15); /* Soft brown focus ring */
+  background-color: #fff;
+}
+
+.create-post-modal  textarea.form-control {
+  min-height: 100px; /* Reasonable default height */
+}
+
+.create-post-modal  .form-control::placeholder {
+    color: #a89d8a; /* Muted placeholder text */
+    opacity: 1;
+}
+
+.create-post-modal  .form-control:disabled {
+    background-color: #f3f3f3; /* Slightly greyed out when disabled */
+    opacity: 0.7;
+}
+
+/* Specific style for color input */
+.create-post-modal  .habit-color-input {
+  height: calc(1.5em + 1.5rem + 2px); /* Match height of other inputs */
+  padding: 0.375rem 0.75rem; /* Adjust padding if needed */
+  cursor: pointer;
+  width: 100%; /* Make it full width */
+  max-width: 100px; /* Or a fixed width if preferred */
+}
+
+/* Button styling using the journal example's primary/secondary theme */
+.create-post-modal  .btn-primary.save-btn-habit,
+.create-post-modal  .btn-primary { /* Apply to save button */
+  background-color: #7a4a2b; /* Main brown color */
+  border-color: #7a4a2b;
+  color: white;
+  padding: 0.6rem 1.3rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.create-post-modal  .btn-primary.save-btn-habit:hover,
+.create-post-modal  .btn-primary:hover {
+  background-color: #63391f; /* Darker brown on hover */
+  border-color: #63391f;
+  transform: translateY(-1px);
+}
+
+.create-post-modal  .btn-primary.save-btn-habit:focus,
+.create-post-modal  .btn-primary:focus {
+  background-color: #63391f;
+  border-color: #63391f;
+  box-shadow: 0 0 0 0.2rem rgba(122, 74, 43, 0.3); /* Slightly stronger focus ring */
+}
+
+.create-post-modal  .btn-primary.save-btn-habit:active,
+.create-post-modal  .btn-primary:active {
+    transform: translateY(0);
+}
+
+
+.create-post-modal  .btn-outline-secondary {
+  background-color: transparent;
+  border-color: #c8a287; /* Lighter brown border */
+  color: #7a4a2b; /* Brown text */
+  padding: 0.6rem 1.3rem;
+   font-weight: 600;
+   transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.create-post-modal  .btn-outline-secondary:hover,
+.create-post-modal  .btn-outline-secondary:focus {
+  background-color: #f0e4d8; /* Very light beige hover */
+  border-color: #a6754a; /* Slightly darker border on hover */
+  color: #63391f; /* Darker text */
+  box-shadow: none; /* Remove default focus shadow if desired */
+}
+
+.create-post-modal  .btn-outline-secondary:active {
+    background-color: #e1d5c4; /* Slightly darker active background */
+}
+
+/* Alert styling inside modal */
+.create-post-modal  .alert {
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+}

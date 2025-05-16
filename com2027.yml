@@ -1,0 +1,14 @@
+project_name: BetterDays
+
+project_description: |
+    Our web app is a combination of a habit tracker, journal and social media feed. We aim to empower vulnerable individuals to achieve their personal goals and keep them on track. It tackles SDG 10 (reduced Inequalities) by providing an accessible platform to set and track goals, share updates, and visualise progress - all whilst simultaneously encouraging SDG 3 (good health and well-being). The app will feature things such as habit streaks, accessibility features, weekly email summaries, comment moderation and much more. It also aids staff in tracking their time and impact via our journaling feature.
+group_members:
+  - James Cocker
+  - Madeleine Teasdale
+  - Nazarii Kostiuk
+  - Oscar Siu
+  - Nigel Agbley
+  - Callistus Onolememen
+  - Charlie Oldfield
+
+group_image: team.jpg

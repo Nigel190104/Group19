@@ -1,0 +1,193 @@
+#logo-and-brand-name {
+  vertical-align: middle;
+}
+
+header {
+  border-bottom: 1px solid #9a9898;
+}
+
+#brand-name {
+  font-size: 35px;
+  font-weight: bolder;
+  text-shadow: 0px 1px, 1px 0px, 1px 1px;
+  transition: font-size 0.3s ease;
+}
+
+.logo-img {
+  width: 64px;
+  height: auto;
+  transition: width 0.3s ease;
+}
+
+.nav-link {
+  color: #454545;
+  font-weight: bold;
+  padding: 0;
+  transition: color 0.3s ease-in-out;
+}
+
+.login-signup {
+  display: flex;
+}
+
+.container {
+  margin: 0;
+}
+
+.nav-button {
+  position: relative;
+  background-color: #eae1d1;
+  color: #454545;
+  border-radius: 10px;
+  font-weight: 700;
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  overflow: visible;
+}
+
+.nav-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  background-color: rgba(151, 145, 136, 0.26);
+  border-radius: 8px; /* Adjust radius as needed */
+  transition: width 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    height 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: -1; /* Place behind button content */
+}
+
+.nav-button:hover::before {
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+}
+
+/* Mobile menu toggle */
+.navbar-toggler {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-left: auto;
+}
+
+.navbar-toggler-icon {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #454545;
+  position: relative;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: #454545;
+  left: 0;
+}
+
+.navbar-toggler-icon::before {
+  top: -8px;
+}
+
+.navbar-toggler-icon::after {
+  top: 8px;
+}
+
+/* Auth buttons container */
+.auth-buttons {
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  #brand-name {
+    font-size: 30px;
+  }
+
+  .logo-img {
+    width: 56px;
+  }
+
+  .nav-button {
+    padding: 8px 16px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar-toggler {
+    display: block;
+  }
+
+  #brand-name {
+    font-size: 26px;
+  }
+
+  .logo-img {
+    width: 50px;
+  }
+
+  .navbar-collapse {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    width: 250px;
+    height: 100vh;
+    background-color: white;
+    z-index: 1000;
+    transition: left 0.3s ease;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+  }
+
+  .navbar-collapse.show {
+    left: 0;
+  }
+
+  .nav {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  .nav li {
+    margin: 0.5rem 0;
+    width: 100%;
+  }
+
+  .nav-link {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  #brand-name {
+    font-size: 22px;
+  }
+
+  .logo-img {
+    width: 42px;
+  }
+}
+
+@media (max-width: 576px) {
+  #brand-name {
+    font-size: 20px;
+  }
+
+  .logo-img {
+    width: 36px;
+  }
+}

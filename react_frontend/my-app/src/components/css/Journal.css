@@ -1,0 +1,270 @@
+.journal-title {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.journal-date {
+  font-size: 1.1rem;
+  color: #6c757d;
+}
+
+.utility {
+  margin-bottom: 24px;
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+/* textured paper background */
+.journal-card {
+  border-radius: 12px;
+  border: none;
+  background-color: #f7f3ea;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23e8e2d3' fill-opacity='0.3' fill-rule='evenodd'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/svg%3E");
+  border: 1px solid #e9e2d0;
+  box-shadow: 0 4px 15px rgba(122, 74, 43, 0.08);
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.journal-card .card-header {
+  padding: 1.25rem 1.5rem 0.5rem;
+}
+
+.journal-card .card-title {
+  font-weight: 600;
+  color: #333;
+}
+
+.journal-card {
+  font-size: 0.95rem;
+}
+.card-subtitle {
+  font-size: 2rem;
+}
+.journal-card-container {
+  position: relative;
+  /* margin-top: 5px; */
+}
+
+.new-entry-button-5 {
+  background-color: #f8f3ee;
+  color: #7a4a2b;
+  border: 1px solid #e9d5c5;
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  padding: 0.5rem 1.2rem;
+  font-weight: 500;
+  transition: all 0.15s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: absolute;
+  top: -45px;
+  right: 20px;
+  z-index: 1;
+}
+
+.new-entry-button-5::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #7a4a2b;
+}
+
+.new-entry-button-5:hover {
+  background-color: #f1e4d8;
+}
+
+/* Empty state styling */
+.empty-state-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: rgba(122, 74, 43, 0.1);
+}
+
+.empty-state-icon svg {
+  color: #7a4a2b;
+}
+
+/* Journal entry item styling */
+.journal-entry-item {
+  transition: transform 0.15s ease;
+}
+
+.journal-entry-item:hover {
+  transform: translateY(-3px);
+}
+
+/* Pagination styling */
+.pagination .page-link {
+  color: #7a4a2b;
+  border-color: #e9d5c5;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #7a4a2b;
+  border-color: #7a4a2b;
+  color: white;
+}
+
+.pagination .page-item.disabled .page-link {
+  color: #aaa;
+}
+
+/* Journal entry analytics */
+.journal-tip {
+  padding: 10px 0;
+  border-bottom: 1px dashed rgba(122, 74, 43, 0.2);
+}
+
+.journal-tip:last-child {
+  border-bottom: none;
+}
+
+/* Modal styles */
+.journal-note-modal .modal-content {
+  background-color: #f8f5f0;
+  border: 1px solid #e1d5c4;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(122, 74, 43, 0.15);
+}
+
+.journal-note-modal .modal-header {
+  border-bottom: 1px solid #e1d5c4;
+  background-color: #f3ece1;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  padding: 1rem 1.5rem;
+}
+
+.journal-note-modal .modal-title {
+  color: #7a4a2b;
+  font-weight: 600;
+}
+
+.journal-note-modal .modal-body {
+  padding: 0;
+}
+
+.journal-note-modal .btn-close {
+  color: #7a4a2b;
+  opacity: 0.8;
+}
+
+.journal-note-modal .btn-close:hover {
+  opacity: 1;
+}
+
+/* CreateNoteView wrapper inside modal */
+.create-note-modal-wrapper {
+  width: 100%;
+}
+
+.create-note-modal-wrapper .note-form {
+  padding: 1.5rem;
+}
+
+.create-note-modal-wrapper .note-title,
+.create-note-modal-wrapper .note-textarea {
+  border: 1px solid #e1d5c4;
+  border-radius: 6px;
+  color: #5a422f;
+  background-color: #fff;
+}
+
+.create-note-modal-wrapper .form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem var(--input-focus-color);
+}
+
+/* Button styling */
+.create-note-modal-wrapper .btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  padding: 0.5rem 1.2rem;
+}
+
+/* Modal wrapper styles */
+.create-note-modal-wrapper .btn-primary:hover,
+.create-note-modal-wrapper .btn-primary:focus {
+  background-color: var(--toggle-active-bg);
+  border-color: var(--toggle-active-bg);
+}
+
+.create-note-modal-wrapper .btn-secondary {
+  background-color: var(--card-bg-color);
+  border-color: var(--border-color);
+  color: var(--text-color);
+  padding: 0.5rem 1.2rem;
+}
+
+.create-note-modal-wrapper .btn-secondary:hover,
+.create-note-modal-wrapper .btn-secondary:focus {
+  background-color: var(--background-color);
+  border-color: var(--border-color);
+  color: var(--text-color);
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .journal-title {
+    font-size: 2rem;
+  }
+
+  .journal-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .journal-header > div:last-child {
+    margin-top: 1rem;
+    width: 100%;
+  }
+}
+
+/* start CTA button  */
+.first-entry-btn {
+  background-color: var(--primary-color);
+  color: var(--tab-active-color);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  border: none;
+  box-shadow: 0 2px 4px var(--shadow-color);
+  transition: all 0.3s ease;
+  animation: gentle-pulse 2s infinite;
+}
+
+.first-entry-btn:hover {
+  background-color: var(--toggle-active-bg);
+  transform: scale(1.05);
+  box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.mood-filter {
+  background: var(--card-bg-color);
+  color: var(--text-color);
+  border-radius: 12px;
+  padding-left: 0.4em;
+  padding-right: 0.4rem;
+}
+
+.close-button {
+  color: var(--text-color);
+  border: none;
+  background: var(--card-bg-color);
+}
+
+.journal-entries-grid {
+  position: relative;
+  z-index: -1;
+}

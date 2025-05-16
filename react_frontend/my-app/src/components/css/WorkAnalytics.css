@@ -1,0 +1,101 @@
+.work-analytics {
+  padding: 10px;
+}
+
+.stat-card {
+  background-color: #f8f5f2;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(122, 74, 43, 0.05);
+  border: 1px solid #e9e2d0;
+  transition: all 0.2s ease;
+}
+
+.stat-card:hover {
+  box-shadow: 0 4px 8px rgba(122, 74, 43, 0.1);
+  transform: translateY(-2px);
+}
+
+.stat-title {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-bottom: 8px;
+}
+
+.stat-value {
+  color: #7a4a2b;
+  font-weight: 600;
+}
+
+.chart-card,
+.insights-card {
+  background-color: #f8f5f2;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(122, 74, 43, 0.05);
+  border: 1px solid #e9e2d0;
+  transition: all 0.2s ease;
+}
+
+.chart-card:hover,
+.insights-card:hover {
+  box-shadow: 0 4px 8px rgba(122, 74, 43, 0.1);
+}
+
+.chart-card h5,
+.insights-card h5 {
+  color: #5a422f;
+  font-weight: 600;
+}
+
+.insight-item h6 {
+  color: #7a4a2b;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.insight-item p {
+  color: #5a422f;
+  font-size: 0.9rem;
+}
+
+.progress {
+  height: 8px;
+  background-color: #e9e2d0;
+}
+
+/* Custom styling for recharts tooltips */
+.recharts-tooltip-wrapper {
+  outline: none;
+}
+
+/* Animation for stat cards */
+.stat-card {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Different animation delay for each card */
+.stat-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.stat-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.stat-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.stat-card:nth-child(4) {
+  animation-delay: 0.4s;
+}

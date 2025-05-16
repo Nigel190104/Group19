@@ -1,0 +1,247 @@
+.logout-btn {
+  background: rgba(119, 115, 108, 0.5);
+  border: none;
+  color: white;
+  font-weight: semi-bold;
+  padding: 2px 8px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: ease-in-out, transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.logout-btn:hover {
+  background: red;
+  transform: scale(1.05);
+}
+
+.logout-btn:active {
+  transform: scale(0.95);
+}
+
+.logout-icon {
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.logout-button-text {
+  display: inline-block;
+}
+
+.utility-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.user-profile-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.user-profile-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight: 500;
+  color: #454545;
+  overflow: visible;
+  transition: color 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.user-profile-header::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  background-color: rgba(151, 145, 136, 0.26);
+  border-radius: 8px;
+  transition: width 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    height 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: -1;
+}
+
+.user-profile-header:hover::before {
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+}
+
+/* Profile Picture Styles */
+.profile-picture-small {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.profile-picture-small img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.username {
+  font-weight: 500;
+  margin-left: 6px;
+}
+
+.menu-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 1000;
+  min-width: 180px;
+  padding: 8px 0;
+  margin-top: 4px;
+  background-color: #f8f5f0;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.menu-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  color: #454545;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.menu-item::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  background-color: rgba(151, 145, 136, 0.26);
+  border-radius: 4px;
+  transition: width 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    height 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: -1;
+}
+
+.menu-item:hover::before {
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+}
+
+.menu-item svg {
+  color: #454545;
+}
+
+.logout-menu-item {
+  color: #e74c3c;
+}
+
+.logout-menu-item:hover {
+  color: #e74c3c;
+}
+
+.logout-menu-item svg {
+  color: #e74c3c;
+}
+
+/* Image error message */
+.image-error-message {
+  color: #e74c3c;
+  font-size: 0.75rem;
+  margin-top: 5px;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .logout-btn {
+    padding: 5px 8px;
+    font-size: 1.2rem !important;
+  }
+
+  .logout-icon {
+    display: flex;
+  }
+
+  .logout-button-text {
+    display: none;
+  }
+
+  .user-profile-header {
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .logout-btn {
+    padding: 4px 7px;
+    font-size: 1rem !important;
+    min-width: 36px;
+  }
+
+  .user-profile-header {
+    padding: 6px 8px;
+  }
+
+  .username {
+    max-width: 80px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media (max-width: 576px) {
+  .logout-btn {
+    padding: 3px 6px;
+    min-width: 32px;
+  }
+
+  .menu-dropdown {
+    min-width: 150px;
+  }
+
+  .menu-item {
+    padding: 8px 12px;
+  }
+
+  .profile-picture-small {
+    width: 28px;
+    height: 28px;
+  }
+
+  .username {
+    max-width: 60px;
+  }
+}

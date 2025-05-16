@@ -1,0 +1,349 @@
+.note-view-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #eae1d1;
+  color: #7a4a2b;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.note-navbar {
+  background-color: #d49a68;
+  border-bottom: 1px solid #a6754a;
+  padding: 1rem;
+}
+
+.note-navbar .navbar-brand {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.cancel-btn {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+  opacity: 0.9;
+}
+
+.cancel-btn:hover {
+  color: white;
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.save-btn {
+  background-color: #a6754a;
+  border-color: #a6754a;
+  color: white;
+  margin-left: 0.75rem;
+  font-weight: 700;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.save-btn:hover {
+  background-color: #7a4a2b;
+  border-color: #7a4a2b;
+  transform: translateY(-1px);
+}
+
+.save-btn:active {
+  transform: translateY(0);
+}
+
+.note-content-form {
+  padding: 2rem 1.5rem;
+  background-color: #e5b989;
+  flex-grow: 1;
+}
+
+.note-form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.note-title {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: #7a4a2b;
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.note-title:focus {
+  border-color: #a6754a;
+  box-shadow: 0 0 0 0.25rem rgba(166, 117, 74, 0.25);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.note-textarea {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  line-height: 1.5;
+  height: 100px;
+  padding: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.note-textarea:focus {
+  border-color: #a6754a;
+  box-shadow: 0 0 0 0.25rem rgba(166, 117, 74, 0.25);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.note-footer {
+  background-color: #d49a68;
+  border-top: 1px solid #a6754a;
+  padding: 1rem;
+}
+
+.icon-btn {
+  background-color: #a6754a;
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: all 0.2s ease;
+}
+
+.icon-btn:hover {
+  background-color: #7a4a2b;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.icon-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.date-display {
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  opacity: 1;
+}
+
+/* modal */
+.journal-note-modal .modal-content {
+  background-color: #f8f5f0;
+  border: 1px solid #e1d5c4;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(122, 74, 43, 0.15);
+}
+
+.journal-note-modal .modal-header {
+  border-bottom: 1px solid #e1d5c4;
+  background-color: #f3ece1;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  padding: 1rem 1.5rem;
+}
+
+.journal-note-modal .modal-title {
+  color: #7a4a2b;
+  font-weight: 600;
+}
+
+.journal-note-modal .modal-body {
+  padding: 20px;
+}
+
+.journal-note-modal .btn-close {
+  color: #7a4a2b;
+  opacity: 0.8;
+}
+
+.journal-note-modal .btn-close:hover {
+  opacity: 1;
+}
+
+/* CreateNoteView wrapper inside modal */
+.create-note-modal-wrapper {
+  width: 100%;
+}
+
+.create-note-modal-wrapper .note-form {
+  padding: 1.5rem;
+}
+
+.create-note-modal-wrapper .note-title {
+  border: 1px solid #e1d5c4;
+  border-radius: 6px;
+  padding: 0.75rem;
+  font-size: 1.2rem;
+  color: #5a422f;
+  background-color: #fff;
+}
+
+.create-note-modal-wrapper .note-textarea {
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  color: var(--text-color);
+  background-color: var(--card-bg-color);
+  min-height: 200px;
+}
+
+.create-note-modal-wrapper .form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem var(--input-focus-color);
+}
+
+/* Button WRAPPER*/
+.create-note-modal-wrapper .btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  padding: 0.5rem 1.2rem;
+}
+
+.create-note-modal-wrapper .btn-primary:hover,
+.create-note-modal-wrapper .btn-primary:focus {
+  background-color: var(--toggle-active-bg);
+  border-color: var(--toggle-active-bg);
+}
+
+.create-note-modal-wrapper .btn-secondary {
+  background-color: var(--card-bg-color);
+  border-color: var(--border-color);
+  color: var(--text-color);
+  padding: 0.5rem 1.2rem;
+}
+
+.create-note-modal-wrapper .btn-secondary:hover,
+.create-note-modal-wrapper .btn-secondary:focus {
+  background-color: var(--background-color);
+  border-color: var(--border-color);
+  color: var(--text-color);
+}
+
+/* Add these styles to your CreateNoteView.css file */
+
+/* Mood selection styling */
+.mood-selection-container {
+  max-height: 300px;
+  overflow-y: auto;
+  border-radius: 8px;
+}
+
+.mood-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.mood-option {
+  flex: 1 0 calc(50% - 10px);
+  padding: 12px;
+  background-color: var(--card-bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mood-option:hover {
+  background-color: var(--background-color);
+  transform: translateY(-2px);
+}
+
+.mood-option.selected {
+  background-color: var(--card-bg-color);
+  border-color: var(--primary-color);
+  box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+.mood-option-name {
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 4px;
+}
+
+.mood-option-description {
+  font-size: 0.85rem;
+  color: var(--text-color);
+}
+
+.mood-badge {
+  background-color: var(--card-bg-color);
+  color: var(--text-color);
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  display: inline-block;
+}
+
+.mood-section {
+  background-color: var(--card-bg-color);
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  height: 100%;
+}
+
+/* Modal specific styling */
+.create-note-modal-wrapper .mood-accordion .accordion-button {
+  background-color: var(--card-bg-color);
+  color: var(--text-color);
+  font-weight: 500;
+  padding: 10px 15px;
+}
+
+.create-note-modal-wrapper .mood-accordion .accordion-button:not(.collapsed) {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.create-note-modal-wrapper .mood-accordion .accordion-button:focus {
+  box-shadow: 0 0 0 0.2rem var(--input-focus-color);
+  border-color: var(--border-color);
+}
+
+/* Custom scrollbar for mood selection */
+.mood-selection-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.mood-selection-container::-webkit-scrollbar-track {
+  background: var(--card-bg-color);
+  border-radius: 10px;
+}
+
+.mood-selection-container::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 10px;
+}
+
+.mood-selection-container::-webkit-scrollbar-thumb:hover {
+  background: var(--input-border-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .mood-option {
+    flex: 1 0 100%;
+  }
+
+  .mood-section {
+    margin-top: 20px;
+  }
+}

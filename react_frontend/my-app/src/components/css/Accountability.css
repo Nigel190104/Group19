@@ -1,0 +1,324 @@
+/* Partner Manager */
+.accountability-partners-container {
+  background-color: #f8f5f0;
+  border: 1px solid #e1d5c4;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(122, 74, 43, 0.15);
+  padding: 20px;
+  margin-bottom: 20px;
+  color: #5a422f;
+}
+
+.partner-title {
+  color: #7a4a2b;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.add-partner-form {
+  margin: 20px 0;
+}
+
+.add-partner-form .form-control {
+  border: 1px solid #e1d5c4;
+  border-radius: 6px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  color: #5a422f;
+  background-color: #fff;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.add-partner-form .form-control:focus {
+  border-color: #c8a287;
+  box-shadow: 0 0 0 0.2rem rgba(122, 74, 43, 0.15);
+  background-color: #fff;
+}
+
+.add-partner-form .btn-primary {
+  background-color: #7a4a2b;
+  border-color: #7a4a2b;
+  color: white;
+  padding: 0.6rem 1.3rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.add-partner-form .btn-primary:hover {
+  background-color: #63391f;
+  border-color: #63391f;
+  transform: translateY(-1px);
+}
+
+.partners-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.partner-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  border-radius: 8px;
+  background-color: #f3ece1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  border: 1px solid #e1d5c4;
+}
+
+.partner-card:hover {
+  background-color: #e9ecef;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(122, 74, 43, 0.1);
+}
+
+.partner-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.partner-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.partner-avatar-placeholder {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c8a287;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.partner-name {
+  font-weight: 500;
+  color: #5a422f;
+}
+
+.partner-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.partner-actions .btn-outline-primary {
+  background-color: transparent;
+  border-color: #c8a287;
+  color: #7a4a2b;
+  padding: 0.4rem 0.8rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.partner-actions .btn-outline-primary:hover {
+  background-color: #f0e4d8;
+  border-color: #a6754a;
+  color: #63391f;
+  box-shadow: none;
+}
+
+.partner-actions .btn-outline-danger {
+  border-color: #dc3545;
+  color: #dc3545;
+  padding: 0.4rem 0.8rem;
+  font-weight: 500;
+}
+
+.partner-actions .btn-outline-danger:hover {
+  background-color: #f8d7da;
+  color: #c82333;
+  box-shadow: none;
+}
+
+/* Partner Habits View */
+.partner-habits-container {
+  background-color: #f8f5f0;
+  border: 1px solid #e1d5c4;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(122, 74, 43, 0.15);
+  padding: 20px;
+  margin-bottom: 20px;
+  color: #5a422f;
+}
+
+.partner-habits-header {
+  margin-bottom: 20px;
+}
+
+.partner-habits-header h2 {
+  color: #7a4a2b;
+  font-weight: 600;
+  margin-bottom: 0;
+  font-size: 1.5rem;
+}
+
+.partner-habits-header .btn-close {
+  color: #7a4a2b;
+  opacity: 0.8;
+  filter: none;
+}
+
+.partner-habits-header .btn-close:hover {
+  opacity: 1;
+}
+
+.partner-habits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.partner-habit-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f3ece1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  border: 1px solid #e1d5c4;
+}
+
+.partner-habit-card:hover {
+  background-color: #e9ecef;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(122, 74, 43, 0.1);
+}
+
+.habit-details {
+  flex: 1;
+}
+
+.habit-name {
+  font-size: 18px;
+  font-weight: 600;
+  /* margin-bottom: 8px; */
+  color: #5a422f;
+}
+
+.habit-description {
+  font-size: 14px;
+  color: #7a4a2b;
+  margin-bottom: 10px;
+}
+
+.habit-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 13px;
+  color: #7a4a2b;
+}
+
+.habit-color-indicator {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.streak-count {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.streak-count i {
+  color: #ff7700;
+}
+
+.last-completed {
+  color: #7a4a2b;
+}
+
+.completed-today.is-completed {
+  color: #28a745;
+  font-weight: 500;
+}
+
+.frequency {
+  color: #7a4a2b;
+}
+
+.habit-actions {
+  margin-left: 15px;
+  margin-top: 5px;
+}
+
+.habit-actions .btn {
+  background-color: #7a4a2b;
+  border-color: #7a4a2b;
+  color: white;
+  padding: 0.6rem 1.3rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.habit-actions .btn:hover {
+  background-color: #63391f;
+  border-color: #63391f;
+  transform: translateY(-1px);
+}
+
+.habit-actions .btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.habit-actions .btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .partner-card,
+  .partner-habit-card {
+    flex-direction: column;
+  }
+
+  .partner-actions,
+  .habit-actions {
+    margin-left: 0;
+    margin-top: 15px;
+    width: 100%;
+  }
+}
+
+.accountability-button {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 600;
+  padding: 0.6rem 1.3rem;
+  border-radius: 25px;
+  border: var(--primary-color);
+  box-shadow: 0 4px 8px rgba(122, 74, 43, 0.15);
+  transition: all 0.2s ease;
+}
+
+.accountability-button:hover {
+  background-color: var(--hover-color);
+  border-color: #63391f;
+  transform: translateY(-2px);
+}
+
+.accountability-button.active {
+  background-color: #f3ece1;
+  color: #7a4a2b;
+  border: 2px solid #7a4a2b;
+}

@@ -1,0 +1,48 @@
+services:
+  backend:
+    build:
+      context: ./django_backend/BetterDays
+    command: gunicorn BetterDays.wsgi --bind 0.0.0.0:8000
+    expose:
+      - "8000"
+    networks:
+      - internal
+    environment:
+      - DJANGO_ALLOWED_HOSTS="backend localhost 127.0.0.1 10.2.8.29"
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./react_frontend/my-app
+    command: sh -c "npm run build && tail -f /dev/null"
+    volumes:
+      - react_build:/react/build
+    networks:
+      - internal
+    restart: unless-stopped
+      
+  nginx:
+    image: nginx:latest
+
+    volumes:
+      - ./nginx/nginx-setup.config:/etc/nginx/conf.d/default.conf:ro
+      - react_build:/var/www/react
+    ports:
+      #80 stands for a generic port whcih all websise are on this acts as a translater which allows us to send it
+      #to port 8080 which nginx is on
+      - 5000:8080
+
+    depends_on:
+      - frontend
+      - backend
+    networks:
+      - internal
+    
+    restart: unless-stopped
+
+volumes:
+  react_build:
+
+networks:
+  internal:
+    driver: bridge

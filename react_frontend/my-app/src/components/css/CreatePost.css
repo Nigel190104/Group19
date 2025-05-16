@@ -1,0 +1,152 @@
+.create-post-card {
+    background-color: #eae1d1;
+    color: #000;
+  }
+  
+  .create-post-profile-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .create-post-avatar-wrapper {
+    position: relative;
+    width: 48px;
+    height: 48px;
+  }
+  
+  .create-post-avatar-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .create-post-avatar-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .create-post-avatar-overlay:hover {
+    opacity: 1;
+  }
+  
+  .create-post-camera-icon {
+    width: 24px;
+    height: 24px;
+    /* color: #fff; */
+  }
+  
+  .create-post-username {
+    flex: 1;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  .create-post-textarea {
+    width: 100%;
+    min-height: 100px;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4;
+    resize: vertical;
+  }
+
+  .create-post-textarea::placeholder {
+    color: black;
+    opacity: 1; /* Firefox */
+  }
+  
+  .create-post-textarea::-ms-input-placeholder { /* Edge 12-18 */
+    color: black;
+  }
+  
+  .create-post-textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: black;
+  }
+  
+  .create-post-textarea:-ms-input-placeholder { /* IE 10+ */
+    color: black;
+  }
+  
+  .create-post-textarea::-moz-placeholder { /* Firefox 19+ */
+    color: black;
+    opacity: 1; /* For older Firefox versions that might not default to 1 */
+  }
+  
+  .create-post-textarea:-moz-placeholder { /* Firefox 4-18 */
+    color: black;
+    opacity: 1;
+  }
+  
+  /* Other styles for the textarea can go here */
+  .create-post-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  
+  .create-post-media-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    border-radius: 1.25rem;
+    background: #f87979;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 94, 98, 0.3),
+      0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .create-post-media-btn:hover {
+    box-shadow: 0 6px 15px rgba(255, 94, 98, 0.4),
+      0 3px 6px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+  }
+  
+  .create-post-media-btn:active {
+    box-shadow: 0 2px 5px rgba(255, 94, 98, 0.3),
+      0 1px 2px rgba(0, 0, 0, 0.1);
+    transform: translateY(1px);
+  }
+  
+  .create-post-submit {
+    background-color: #f87979;
+    color: #fff !important;
+    border: none;
+    border-radius: 300px;
+    padding: 0.6rem 1.5rem !important;
+  }
+  
+  .create-post-preview {
+    margin-bottom: 1rem;
+  }
+  
+  .create-post-preview img,
+  .create-post-preview video {
+    max-width: 100%;
+    border-radius: 12px;
+    background: rgba(176, 127, 88, 0.5);
+  }
+  

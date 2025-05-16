@@ -1,0 +1,332 @@
+/* Root styles */
+:root {
+  --primary-color: #f87979;
+  --background-color: #f4f4f4;
+  --card-bg-color: white;
+  --text-color: #222;
+  --border-color: #bbb;
+  --input-border-color: #aaa;
+  --input-focus-color: rgba(248, 121, 121, 0.25);
+  --toggle-bg: #ccc;
+  --toggle-active-bg: #f87979;
+  --radio-accent: #f87979;
+  --tab-active-bg: #f87979;
+  --tab-active-color: white;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Base styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  min-height: 100vh;
+}
+
+/* Apply theme to all elements */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* Card base styles */
+.card {
+  background-color: var(--card-bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px var(--shadow-color);
+}
+
+/* Container styles */
+.container {
+  background-color: var(--background-color);
+  /* min-height: 100vh; */
+}
+
+/* Journal card base styles */
+.journal-card {
+  background-color: var(--card-bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px var(--shadow-color);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* Halow theme */
+[data-theme="Halow"] {
+  --primary-color: #f78f81;
+  --background-color: #b7e0ff;
+  --card-bg-color: #ffcfb3;
+  --text-color: #333333;
+  --border-color: #ffffcd;
+  --input-border-color: #b7e0ff;
+  --input-focus-color: rgba(247, 143, 129, 0.25);
+  --toggle-bg: #ffffcd;
+  --toggle-active-bg: #ffcfb3;
+  --radio-accent: #f78f81;
+  --tab-active-bg: #ffcfb3;
+  --tab-active-color: #333333;
+  --shadow-color: rgba(247, 143, 129, 0.3);
+}
+
+/* Monochrome Theme */
+[data-theme="Monochrome"] {
+  --primary-color: #000000 !important;
+  --background-color: #ffffff !important;
+  --card-bg-color: #ffffff !important;
+  --text-color: #ffffff !important;
+  --border-color: #000000 !important;
+  --input-border-color: #000000 !important;
+  --input-focus-color: rgba(0, 0, 0, 0.5) !important;
+  --toggle-bg: #cccccc !important;
+  --toggle-active-bg: #000000 !important;
+  --radio-accent: #000000 !important;
+  --tab-active-bg: #000000 !important;
+  --tab-active-color: #ffffff !important;
+  --shadow-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Sky Theme */
+[data-theme="Sky"] {
+  --primary-color: #3a7ca5;
+  --background-color: #d9dcd6;
+  --card-bg-color: #81c3d7;
+  --text-color: #3492c9;
+  --border-color: #2f6690;
+  --input-border-color: #3a7ca5;
+  --input-focus-color: rgba(22, 66, 91, 0.25);
+  --toggle-bg: #3a7ca5;
+  --toggle-active-bg: #81c3d7;
+  --radio-accent: #328fc5;
+  --tab-active-bg: #81c3d7;
+  --tab-active-color: #3492c9;
+  --shadow-color: rgba(22, 66, 91, 0.3);
+}
+
+/* Forest Theme */
+[data-theme="Forest"] {
+  --primary-color: #588157;
+  --background-color: #dad7cd;
+  --card-bg-color: #a3b18a;
+  --text-color: #3a5a40;
+  --border-color: #3a5a40;
+  --input-border-color: #344e41;
+  --input-focus-color: rgba(88, 129, 87, 0.25);
+  --toggle-bg: #344e41;
+  --toggle-active-bg: #588157;
+  --radio-accent: #588157;
+  --tab-active-bg: #a3b18a;
+  --tab-active-color: #3a5a40;
+  --shadow-color: rgba(88, 129, 87, 0.3);
+}
+
+/* Amethyst Theme */
+[data-theme="Amethyst"] {
+  --primary-color: #69247c;
+  --background-color: #f5e6e8;
+  --card-bg-color: #d5c6e0;
+  --text-color: #69247c;
+  --border-color: #aaa1c8;
+  --input-border-color: #967aa1;
+  --input-focus-color: rgba(25, 42, 81, 0.25);
+  --toggle-bg: #aaa1c8;
+  --toggle-active-bg: #967aa1;
+  --radio-accent: #69247c;
+  --tab-active-bg: #967aa1;
+  --tab-active-color: #69247c;
+  --shadow-color: rgba(25, 42, 81, 0.3);
+}
+
+/* Blossom Theme */
+[data-theme="Blossom"] {
+  --primary-color: #e2a8c9;
+  --background-color: #f8d9e9;
+  --card-bg-color: #fbe0d5;
+  --text-color: #333333;
+  --border-color: #e2a8c9;
+  --input-border-color: #fbe0d5;
+  --input-focus-color: rgba(226, 168, 201, 0.25);
+  --toggle-bg: #fbe0d5;
+  --toggle-active-bg: #e2a8c9;
+  --radio-accent: #e2a8c9;
+  --tab-active-bg: #e2a8c9;
+  --tab-active-color: #333333;
+  --shadow-color: rgba(226, 168, 201, 0.3);
+}
+
+/* Night Theme */
+[data-theme="Night"] {
+  --primary-color: #51a3a3;
+  --background-color: #282828;
+  --card-bg-color: #383838;
+  --text-color: #c0c0c0;
+  --border-color: #51a3a3;
+  --input-border-color: #383838;
+  --input-focus-color: rgba(81, 163, 163, 0.25);
+  --toggle-bg: #383838;
+  --toggle-active-bg: #51a3a3;
+  --radio-accent: #51a3a3;
+  --tab-active-bg: #51a3a3;
+  --tab-active-color: #c0f0f0;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Beach Theme */
+[data-theme="Beach"] {
+  --primary-color: #ffddae;
+  --background-color: #c6e7ff;
+  --card-bg-color: #d4f6ff;
+  --text-color: #333333;
+  --border-color: #ffddae;
+  --input-border-color: #d4f6ff;
+  --input-focus-color: rgba(255, 221, 174, 0.25);
+  --toggle-bg: #d4f6ff;
+  --toggle-active-bg: #ffddae;
+  --radio-accent: #ffddae;
+  --tab-active-bg: #ffddae;
+  --tab-active-color: #333333;
+  --shadow-color: rgba(255, 221, 174, 0.3);
+}
+
+/* Pastel Theme */
+[data-theme="Pastel"] {
+  --primary-color: #a8d0e6;
+  --background-color: #ffffff;
+  --card-bg-color: #fce8d3;
+  --text-color: #333;
+  --border-color: #f9caca;
+  --input-border-color: #f3e5f5;
+  --input-focus-color: rgba(168, 208, 230, 0.25);
+  --toggle-bg: #f3e5f5;
+  --toggle-active-bg: #f9caca;
+  --radio-accent: #a8d0e6;
+  --tab-active-bg: #fce8d3;
+  --tab-active-color: #333;
+  --shadow-color: rgba(168, 208, 230, 0.3);
+}
+
+/* Sunset Theme */
+[data-theme="Sunset"] {
+  --primary-color: #3a2f63;
+  --background-color: #f8e797;
+  --card-bg-color: #f2a154;
+  --text-color: #111;
+  --border-color: #e95766;
+  --input-border-color: #f2a154;
+  --input-focus-color: rgba(58, 47, 99, 0.25);
+  --toggle-bg: #e95766;
+  --toggle-active-bg: #f2a154;
+  --radio-accent: #3a2f63;
+  --tab-active-bg: #f2a154;
+  --tab-active-color: #111;
+  --shadow-color: rgba(58, 47, 99, 0.3);
+}
+
+/* Verdant Theme */
+[data-theme="Verdant"] {
+  --primary-color: #ab886d;
+  --background-color: #e6eae1;
+  --card-bg-color: #b9d0c1;
+  --text-color: #493628;
+  --border-color: #ab886d;
+  --input-border-color: #b9d0c1;
+  --input-focus-color: rgba(171, 136, 109, 0.25);
+  --toggle-bg: #b9d0c1;
+  --toggle-active-bg: #ab886d;
+  --radio-accent: #ab886d;
+  --tab-active-bg: #ab886d;
+  --tab-active-color: #e6eae1;
+  --shadow-color: rgba(73, 54, 40, 0.3);
+}
+
+/* Rustic Theme */
+[data-theme="Rustic"] {
+  --primary-color: #a31d1d;
+  --background-color: #fef9e1;
+  --card-bg-color: #e5d0ac;
+  --text-color: #6d2323;
+  --border-color: #a31d1d;
+  --input-border-color: #e5d0ac;
+  --input-focus-color: rgba(163, 29, 29, 0.25);
+  --toggle-bg: #e5d0ac;
+  --toggle-active-bg: #a31d1d;
+  --radio-accent: #a31d1d;
+  --tab-active-bg: #a31d1d;
+  --tab-active-color: #fef9e1;
+  --shadow-color: rgba(109, 35, 35, 0.3);
+}
+
+/* Night Theme - White placeholder text */
+[data-theme="Night"] .input-field::placeholder,
+[data-theme="Night"] .textarea-field::placeholder {
+  color: #ffffff !important;
+  opacity: 0.7;
+}
+
+/* Vendor prefixes for Night theme */
+[data-theme="Night"] .input-field::-webkit-input-placeholder,
+[data-theme="Night"] .textarea-field::-webkit-input-placeholder {
+  color: #ffffff !important;
+  opacity: 0.7;
+}
+[data-theme="Night"] .input-field::-moz-placeholder,
+[data-theme="Night"] .textarea-field::-moz-placeholder {
+  color: #ffffff !important;
+  opacity: 0.7;
+}
+[data-theme="Night"] .input-field:-ms-input-placeholder,
+[data-theme="Night"] .textarea-field:-ms-input-placeholder {
+  color: #ffffff !important;
+  opacity: 0.7;
+}
+[data-theme="Night"] .input-field:-moz-placeholder,
+[data-theme="Night"] .textarea-field:-moz-placeholder {
+  color: #ffffff !important;
+  opacity: 0.7;
+}
+
+/* Black placeholder text for all themes */
+.input-field::placeholder,
+.textarea-field::placeholder {
+  color: #000000 !important;
+  opacity: 0.8;
+}
+
+/* Vendor prefixes for maximum compatibility */
+.input-field::-webkit-input-placeholder,
+.textarea-field::-webkit-input-placeholder {
+  color: #000000 !important;
+  opacity: 0.8;
+}
+.input-field::-moz-placeholder,
+.textarea-field::-moz-placeholder {
+  color: #000000 !important;
+  opacity: 0.8;
+}
+.input-field:-ms-input-placeholder,
+.textarea-field:-ms-input-placeholder {
+  color: #000000 !important;
+  opacity: 0.8;
+}
+.input-field:-moz-placeholder,
+.textarea-field:-moz-placeholder {
+  color: #000000 !important;
+  opacity: 0.8;
+}
+
+/* Reduce Motion Mode */
+.reduce-motion * {
+  transition-duration: 2s !important;
+  animation-duration: 2s !important;
+  transition-delay: 0.5s !important;
+  animation-delay: 0.5s !important;
+}

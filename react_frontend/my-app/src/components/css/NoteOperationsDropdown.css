@@ -1,0 +1,100 @@
+.note-operations-dropdown {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 100;
+}
+
+.note-operations-dropdown .dropdown-toggle {
+  background-color: rgba(243, 236, 225, 0.8);
+  color: #7a4a2b;
+  border: 1px solid #e1d5c4;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(122, 74, 43, 0.1);
+  transition: all 0.15s ease;
+  cursor: pointer;
+  position: relative;
+  z-index: 101;
+}
+
+.note-operations-dropdown .dropdown-toggle:hover,
+.note-operations-dropdown .dropdown-toggle:focus {
+  background-color: #f0e4d8;
+  box-shadow: 0 3px 6px rgba(122, 74, 43, 0.15);
+  transform: translateY(-1px);
+}
+
+.note-operations-dropdown .dropdown-toggle:active {
+  transform: translateY(0);
+}
+
+.note-operations-dropdown .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 5px;
+  background-color: #f8f5f0;
+  border: 1px solid #e1d5c4;
+  border-radius: 6px;
+  box-shadow: 0 3px 8px rgba(122, 74, 43, 0.15);
+  padding: 0.25rem;
+  min-width: 160px;
+  z-index: 102; /* Ensure the menu is above everything */
+}
+
+.note-operations-dropdown .dropdown-menu.show {
+  display: block;
+}
+
+.note-operations-dropdown .dropdown-item {
+  color: #7a4a2b;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.1s ease;
+  background: none;
+  border: none;
+  text-align: left;
+  width: 100%;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 2px;
+}
+
+.note-operations-dropdown .dropdown-item:last-child {
+  margin-bottom: 0;
+}
+
+.note-operations-dropdown .dropdown-item:hover {
+  background-color: #f0e4d8;
+}
+
+.note-operations-dropdown .dropdown-item.active,
+.note-operations-dropdown .dropdown-item:active {
+  background-color: #a6754a;
+  color: white;
+}
+
+.note-operations-dropdown .item-icon {
+  margin-right: 0.5rem;
+  opacity: 0.8;
+}
+
+.note-operations-dropdown .delete-item {
+  color: #d9534f;
+}
+
+.note-operations-dropdown .delete-item:hover {
+  background-color: rgba(217, 83, 79, 0.1);
+}
+
+.note-operations-dropdown .delete-item:active {
+  background-color: rgba(217, 83, 79, 0.2);
+}

@@ -1,0 +1,122 @@
+.month-selector {
+  position: relative;
+  display: inline-block;
+}
+
+.month-selector-toggle {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #6c757d;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.month-selector-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.month-selector-toggle svg {
+  transition: transform 0.2s ease;
+}
+
+.month-selector-toggle svg.rotate-180 {
+  transform: rotate(180deg);
+}
+
+.month-selector-dropdown {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  background-color: white;
+  border-radius: 8px;
+  width: 280px;
+  z-index: 1000;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e9ecef;
+}
+
+.year-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #e9ecef;
+  max-width: 100%;
+}
+
+.year-tab {
+  flex: 1;
+  min-width: 56px;
+  padding: 8px 4px;
+  text-align: center;
+  background: none;
+  border: none;
+  font-weight: 500;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.year-tab:hover {
+  background-color: #f8f9fa;
+}
+
+.year-tab.active {
+  background-color: #f1ebf7;
+  color: #7a4a2b;
+  font-weight: 600;
+}
+
+.month-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 10px;
+}
+
+.month-item {
+  background: none;
+  border: none;
+  padding: 8px 4px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 2px;
+  transition: all 0.2s ease;
+  font-size: 0.85rem;
+}
+
+.month-item:hover {
+  background-color: #f1ebf7;
+  color: #7a4a2b;
+}
+
+.month-item.current {
+  font-weight: bold;
+  background-color: #f8f5f2;
+}
+
+@media (max-width: 576px) {
+  .month-selector-dropdown {
+    width: 240px;
+    right: 0;
+    left: auto;
+  }
+
+  .month-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .month-item {
+    padding: 6px 2px;
+    font-size: 0.8rem;
+  }
+
+  .year-tab {
+    padding: 8px 4px;
+    font-size: 0.8rem;
+  }
+}

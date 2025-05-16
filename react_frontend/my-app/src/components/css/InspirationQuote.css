@@ -1,0 +1,280 @@
+/* Inspiration Quote Section */
+.inspiration-section {
+  background-color: #fcf9f6;
+  padding: 4rem 0;
+  color: #5d341f;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* Quote Card */
+.quote-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+}
+
+.quote-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid #e4ddd3;
+  background-color: #f8f5f2;
+}
+
+.quote-title {
+  color: #5d341f;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.quote-body {
+  padding: 3.5rem 2.5rem;
+  position: relative;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quote-content {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  z-index: 2;
+}
+
+.quote-decoration {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.quote-text {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #5d341f;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 2;
+  font-style: italic;
+}
+
+.quote-author {
+  font-size: 1.1rem;
+  color: #7a4a2b;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.quote-footer {
+  padding: 1.25rem 1.5rem;
+  border-top: 1px solid #e4ddd3;
+  background-color: #f8f5f2;
+  text-align: center;
+}
+
+.quote-tip {
+  color: #7a4a2b;
+  font-size: 0.9rem;
+  margin: 0;
+  font-style: italic;
+}
+
+/* Loading state */
+.quote-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+}
+
+.quote-spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid #e4ddd3;
+  border-top: 4px solid #d7845f;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+.loading-text {
+  color: #7a4a2b;
+  font-size: 1rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Error state */
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+}
+
+.error-message {
+  color: #7a4a2b;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.retry-button {
+  background-color: #d7845f;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.retry-button:hover {
+  background-color: #c57350;
+  transform: translateY(-2px);
+}
+
+/* Refresh quote button */
+.refresh-quote-button {
+  background-color: #f8f5f2;
+  color: #7a4a2b;
+  border: 1px solid #e4ddd3;
+  border-radius: 30px;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.refresh-quote-button:hover {
+  background-color: #e4ddd3;
+  transform: translateY(-2px);
+}
+
+/* Utilities */
+.py-5 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.container {
+  width: 100%;
+  /* max-width: 1200px; */
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+
+.col-lg-10 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.align-items-center {
+  align-items: center !important;
+}
+
+.me-2 {
+  margin-right: 0.5rem !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+/* Responsiveness */
+@media (min-width: 992px) {
+  .col-lg-10 {
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%;
+  }
+}
+
+@media (max-width: 768px) {
+  .quote-body {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .quote-text {
+    font-size: 1.2rem;
+  }
+
+  .quote-title {
+    font-size: 1.2rem;
+  }
+}
+
+/* Animation for quote appearance */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.quote-content {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Add some subtle animation to the decoration */
+@keyframes float {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.quote-decoration {
+  animation: float 6s ease-in-out infinite;
+}
