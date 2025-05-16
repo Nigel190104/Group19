@@ -122,8 +122,8 @@ function Feed() {
     setLoading(true);
     try {
       const [postsResponse, commentsResponse] = await Promise.all([
-        fetch(BACKEND_BASE_URL + "/api/posts/"),
-        fetch(BACKEND_BASE_URL + "/api/comments/"),
+        fetch(BACKEND_BASE_URL + "api/posts/"),
+        fetch(BACKEND_BASE_URL + "api/comments/"),
       ]);
 
       const postsData = await postsResponse.json();
@@ -159,7 +159,7 @@ function Feed() {
     if (usersLoading) return; // Prevent multiple simultaneous calls
     setUsersLoading(true);
     try {
-      const response = await fetch(BACKEND_BASE_URL + "/api/users/");
+      const response = await fetch(BACKEND_BASE_URL + "api/users/");
       const userData = await response.json();
 
       // Update users with their follow status

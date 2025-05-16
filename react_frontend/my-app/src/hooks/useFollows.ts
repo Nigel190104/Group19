@@ -63,10 +63,10 @@ export const useFollows = (userId: number | undefined) => {
       
       try {
         const [followersResponse, followingResponse] = await Promise.all([
-          fetch(`${BACKEND_BASE_URL}/api/follows/${userId}/followers/`, {
+          fetch(`${BACKEND_BASE_URL}api/follows/${userId}/followers/`, {
             credentials: 'include'
           }),
-          fetch(`${BACKEND_BASE_URL}/api/follows/${userId}/following/`, {
+          fetch(`${BACKEND_BASE_URL}api/follows/${userId}/following/`, {
             credentials: 'include'
           })
         ]);
@@ -99,7 +99,7 @@ export const useFollows = (userId: number | undefined) => {
     }
 
     try {
-      const response = await fetch(`${BACKEND_BASE_URL}/api/follows/toggle/`, {
+      const response = await fetch(`${BACKEND_BASE_URL}api/follows/toggle/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -121,7 +121,7 @@ export const useFollows = (userId: number | undefined) => {
       // Immediately update the following list based on the response
       if (newStatus) {
         // If we're now following, add to following list
-        const userResponse = await fetch(`${BACKEND_BASE_URL}/api/users/${targetUserId}/`, {
+        const userResponse = await fetch(`${BACKEND_BASE_URL}api/users/${targetUserId}/`, {
           credentials: 'include'
         });
         if (userResponse.ok) {
@@ -162,10 +162,10 @@ export const useFollows = (userId: number | undefined) => {
 
       // Refresh both lists to ensure consistency
       const [followersResponse, followingResponse] = await Promise.all([
-        fetch(`${BACKEND_BASE_URL}/api/follows/${userId}/followers/`, {
+        fetch(`${BACKEND_BASE_URL}api/follows/${userId}/followers/`, {
           credentials: 'include'
         }),
-        fetch(`${BACKEND_BASE_URL}/api/follows/${userId}/following/`, {
+        fetch(`${BACKEND_BASE_URL}api/follows/${userId}/following/`, {
           credentials: 'include'
         })
       ]);
