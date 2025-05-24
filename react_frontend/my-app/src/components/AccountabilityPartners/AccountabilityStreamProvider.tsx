@@ -1,4 +1,4 @@
-// src/AccountabilityPartners/AccountabilityStreamProvider.tsx
+/ src/AccountabilityPartners/AccountabilityStreamProvider.tsx
 import React, {
   createContext,
   useContext,
@@ -83,11 +83,14 @@ export const AccountabilityStreamProvider: React.FC<
   // Setup SSE connection
   useEffect(() => {
     let es: EventSource | null = null;
+    let isMounted = true;
 
     const setupConnection = () => {
+      if (!isMounted) return;
       // Close existing connection if any
       if (es) {
         es.close();
+        setEventSource(null);
       }
 
       setLoading(true);
@@ -101,25 +104,29 @@ export const AccountabilityStreamProvider: React.FC<
 
       // Handle connection open
       es.onopen = () => {
-        setConnected(true);
-        console.log("SSE connection established");
+        if (isMounted) {
+          setConnected(true);
+          console.log("SSE connection established");
+        }
       };
 
       // Handle initial partners data
       es.addEventListener("initial_partners", (event) => {
+        if (!isMounted) return;
         try {
           const data = JSON.parse(event.data) as Partner[];
           setPartners(data);
           setLoading(false);
         } catch (e) {
           console.error("Error parsing initial partners data:", e);
-          setError("Failed to load partners data");
-          setLoading(false);
+          if (isMounted) setError("Failed to load partners data");
+          if (isMounted) setLoading(false);
         }
       });
 
       // Handle partner updates
       es.addEventListener("partners_update", (event) => {
+        if (!isMounted) return;
         try {
           const data = JSON.parse(event.data) as Partner[];
           setPartners(data);
@@ -130,6 +137,7 @@ export const AccountabilityStreamProvider: React.FC<
 
       // Handle habit updates
       es.addEventListener("habit_update", (event) => {
+        if (!isMounted) return;
         try {
           console.log("Received habit update event:", event.data);
           const data = JSON.parse(event.data);
@@ -144,12 +152,13 @@ export const AccountabilityStreamProvider: React.FC<
       // Handle errors
       es.onerror = (error) => {
         console.error("SSE connection error:", error);
+        if (!isMounted) return;
         setError("Connection error");
         setConnected(false);
 
         // Attempt to reconnect after delay
         setTimeout(() => {
-          setupConnection();
+          if (isMounted) setupConnection();
         }, 5000);
       };
     };
@@ -158,8 +167,10 @@ export const AccountabilityStreamProvider: React.FC<
 
     // Cleanup on unmount
     return () => {
+      isMounted = false; // Mark component as unmounted
       if (es) {
         es.close();
+        setEventSource(null);
       }
     };
   }, []);
